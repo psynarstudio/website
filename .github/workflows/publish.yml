@@ -1,11 +1,9 @@
 # 每次 push 到 main（包含從 Pages CMS 後台存檔）都會自動建置並發布網站
 name: Publish site
 
-# 目前 repo 為私人、尚未開啟 Pages，先停用自動觸發。
-# 準備上線時：把 repo 改公開、Pages Source 設為 GitHub Actions，再取消下面三行的註解。
 on:
-  # push:
-  #   branches: [main]
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
