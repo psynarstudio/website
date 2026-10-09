@@ -1,0 +1,149 @@
+/*-- scss:defaults --*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Merriweather:wght@700;900&display=swap');
+
+// 有心敘士識別規範：標準色與輔助色
+$navy:       #23455A;   // PANTONE 7701C
+$navy-deep:  #1A3445;
+$mist:       #EDEDED;   // PANTONE 656C
+$sun:        #F2B84B;   // 輔助色（水彩暖黃）
+$ink:        #1F2A33;
+$ink-soft:   #3A4853;
+$muted:      #4E5D68;
+$line:       #D5D9DC;
+
+$primary: $navy;
+$body-bg: #FFFFFF;
+$body-color: $ink;
+$link-color: $navy;
+$font-family-sans-serif: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+$headings-font-weight: 900;
+$headings-color: $navy;
+$line-height-base: 1.75;
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+$navbar-bg: #FFFFFF;
+$navbar-fg: $navy;
+$navbar-hl: $navy;
+$footer-bg: $navy-deep;
+$footer-fg: #D8E0E5;
+
+/*-- scss:rules --*/
+
+// ---------- 共用 ----------
+.wrap { max-width: 1280px; margin: 0 auto; padding-left: 40px; padding-right: 40px; }
+.latin { font-family: "Merriweather", Georgia, serif; font-weight: 700; }
+.eyebrow { display: block; font-size: 14px; font-weight: 700; letter-spacing: .24em; color: $muted; margin-bottom: 14px; }
+.underline-link { font-weight: 700; text-decoration: none; border-bottom: 2px solid $sun; padding-bottom: 4px; }
+.btn-sun, .btn-navy, .btn-ghost {
+  display: inline-flex; align-items: center; min-height: 48px; padding: 12px 28px;
+  font-weight: 700; text-decoration: none;
+}
+.btn-sun  { background: $sun; color: $navy-deep !important; }
+.btn-navy { background: $navy; color: #fff !important; }
+.btn-ghost{ border: 1px solid #fff; color: #fff !important; }
+.section-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 48px; }
+.section-title { font-size: clamp(30px, 3.4vw, 44px); line-height: 1.3; margin: 0; }
+:focus-visible { outline: 3px solid $sun; outline-offset: 2px; }
+
+// ---------- 導覽列 ----------
+#quarto-header .navbar { border-bottom: 1px solid $line; padding-top: 10px; padding-bottom: 10px; }
+#quarto-header .navbar-title { font-weight: 900; letter-spacing: .04em; }
+#quarto-header .navbar-nav .nav-link { font-weight: 500; }
+#quarto-header .navbar-nav .nav-item:last-child .nav-link {
+  background: $navy; color: #fff; padding: 10px 22px; margin-left: 12px;
+}
+#quarto-header .navbar-nav .nav-link.active { box-shadow: inset 0 -2px 0 $sun; }
+
+// ---------- 首頁 ----------
+.hero { padding-top: 104px; padding-bottom: 40px; }
+.display { display: block; font-weight: 900; color: $navy; font-size: clamp(44px, 7vw, 76px); line-height: 1.18; margin-bottom: 36px; }
+.hero-row { display: flex; flex-wrap: wrap; gap: 32px 40px; align-items: flex-end; justify-content: space-between; }
+.hero-row p { font-size: 20px; color: $ink-soft; max-width: 640px; margin: 0; }
+.hero-image img { display: block; width: 100%; max-width: 1440px; height: auto; margin: 24px auto 0; }
+
+.band-mist { background: $mist; }
+.band-navy { background: $navy; color: #fff; }
+.band-navy h2, .band-navy h3 { color: #fff; }
+.band-navy p { color: #D8E0E5; }
+.pad { padding-top: 104px; padding-bottom: 104px; }
+
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2px; background: $line; }
+.step { background: #fff; padding: 36px 32px; }
+.step-num { display: block; font-family: "Merriweather", serif; font-weight: 900; font-size: 40px; line-height: 1; color: $sun; margin-bottom: 12px; }
+.step-title { display: block; font-weight: 900; font-size: 24px; color: $navy; margin-bottom: 8px; }
+.step p { font-size: 15px; color: $ink-soft; margin: 0; }
+
+.about-strip { display: flex; flex-wrap: wrap; background: $mist; margin: 56px 0 112px; }
+.about-photo { flex: 1 1 520px; min-width: 0; }
+.about-strip img { width: 100%; height: 460px; object-fit: cover; display: block; }
+.about-text { flex: 1 1 400px; padding: 56px; display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+.about-text h2 { font-size: 32px; line-height: 1.4; margin: 0; }
+
+.studio { display: flex; flex-wrap: wrap; gap: 48px 64px; align-items: center; }
+.studio-logo img { width: 150px; height: auto; }
+.studio-text { flex: 999 1 520px; }
+.studio-text .eyebrow { color: $sun; }
+.studio-text h2 { font-size: clamp(30px, 3.2vw, 40px); line-height: 1.35; margin: 0 0 18px; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+
+// ---------- 文章列表（Quarto listing）----------
+.quarto-grid-item.card { border: 0; box-shadow: none; background: transparent; }
+.quarto-grid-item .card-img-top { border-radius: 0; }
+.quarto-grid-item .card-body { padding: 14px 0 0; }
+.quarto-grid-item .card-title { font-weight: 900; color: $navy; font-size: 22px; line-height: 1.4; }
+.quarto-grid-item .listing-categories .listing-category,
+.quarto-title .quarto-categories .quarto-category {
+  border: 0; border-radius: 0; background: $mist; color: $muted; font-size: 12px; text-transform: none;
+}
+
+// ---------- 方法頁 ----------
+.method-step { display: flex; flex-wrap: wrap; gap: 56px; align-items: center; padding-bottom: 72px; margin-bottom: 72px; border-bottom: 1px solid $line; }
+.method-step.reverse { flex-direction: row-reverse; }
+.method-step:last-child { border-bottom: 0; margin-bottom: 0; }
+.method-step > div { flex: 1 1 440px; min-width: 0; }
+.method-step img { width: 100%; height: 340px; object-fit: cover; }
+.method-step h3 { font-size: 32px; margin: 0 0 16px; }
+.qa { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; font-size: 15px; margin-top: 24px; }
+.qa strong { display: block; color: $navy; margin-bottom: 6px; }
+.lenses { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; }
+.lenses h3 { color: $sun !important; font-size: 22px; }
+.ph { background: repeating-linear-gradient(135deg, $mist 0 10px, #E3E5E7 10px 20px); color: $muted; display: flex; align-items: center; justify-content: center; height: 340px; font-size: 14px; }
+
+// ---------- 文章頁 ----------
+#title-block-header .title { font-size: clamp(38px, 5vw, 60px); line-height: 1.25; }
+.step-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 32px; }
+.step-tag { font-size: 13px; padding: 2px 10px; border: 1px solid #8C99A3; color: $muted; }
+.step-tag.on { background: $sun; border-color: $sun; color: $navy-deep; font-weight: 700; }
+main.content h2 { font-size: 28px; margin-top: 48px; }
+main.content p { font-size: 18px; color: $ink-soft; }
+.concept-card { background: $navy; color: #fff; padding: 32px 36px; margin: 28px 0 48px; }
+.concept-card p { color: #D8E0E5 !important; font-size: 16px !important; margin: 0; }
+.concept-card .concept-label { display: block; color: $sun; font-size: 13px; font-weight: 700; letter-spacing: .16em; margin-bottom: 8px; }
+.concept-card strong { display: block; font-size: 22px; margin-bottom: 8px; }
+.place-card { background: $mist; padding: 28px; margin: 24px 0 48px; }
+.place-card p { font-size: 15px !important; margin: 0 0 4px; }
+.series-nav { border-top: 1px solid $line; padding-top: 28px; margin-top: 56px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-weight: 700; }
+
+// ---------- 訂閱 ----------
+.subscribe { display: flex; flex-wrap: wrap; gap: 32px 40px; align-items: flex-end; justify-content: space-between; padding-top: 96px; padding-bottom: 96px; }
+.subscribe h2 { font-size: 36px; margin: 0 0 8px; }
+.subscribe form { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; flex: 1 1 460px; }
+.subscribe label { display: block; font-size: 14px; color: $ink-soft; margin-bottom: 6px; }
+.subscribe .field { flex: 1 1 260px; }
+.subscribe input { width: 100%; min-height: 50px; padding: 12px 16px; border: 1px solid #8C99A3; font: inherit; }
+.subscribe button { min-height: 50px; padding: 12px 32px; border: 0; background: $navy; color: #fff; font-weight: 700; }
+
+// ---------- 頁尾 ----------
+.nav-footer { padding-top: 32px; padding-bottom: 32px; }
+.nav-footer a { color: #D8E0E5; }
+
+// ---------- 手機 ----------
+@media (max-width: 767px) {
+  .wrap { padding-left: 20px; padding-right: 20px; }
+  .hero { padding-top: 56px; }
+  .pad { padding-top: 64px; padding-bottom: 64px; }
+  .about-text { padding: 32px 24px; }
+  .method-step, .method-step.reverse { flex-direction: column; gap: 28px; }
+}

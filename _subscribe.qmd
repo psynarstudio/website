@@ -1,0 +1,16 @@
+```{=html}
+<section class="wrap subscribe" id="subscribe">
+  <div>
+    <h2>收到新的城市筆記</h2>
+    <p>新文章發布時寄給你，不會太頻繁。</p>
+  </div>
+  <!-- 把 action 換成你電子報服務（例如 Buttondown）提供的訂閱表單網址 -->
+  <form action="https://buttondown.com/api/emails/embed-subscribe/[你的帳號]" method="post" target="_blank">
+    <div class="field">
+      <label for="subscribe-email">電子郵件</label>
+      <input id="subscribe-email" type="email" name="email" placeholder="you@example.com" required>
+    </div>
+    <button type="submit">訂閱</button>
+  </form>
+</section>
+```

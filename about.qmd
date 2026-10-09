@@ -1,0 +1,18 @@
+---
+title: "關於"
+---
+
+![](images/portrait.jpg){fig-alt="[你的名字] 的照片"}
+
+[這裡寫你的故事：從臨床心理師、體驗設計工作室，到在 Glasgow 學城市分析。三個身份如何變成同一個問題：人在城市裡，如何過得好？]
+
+## 經歷
+
+- 臨床心理師
+- 心理學碩士，研究主題：希望感
+- University of Glasgow，MSc Urban Analytics（就讀中）
+- 有心敘士工作室 Nar Studio 主理人
+
+## 聯絡
+
+[電子郵件或聯絡方式]

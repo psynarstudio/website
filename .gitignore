@@ -1,0 +1,9 @@
+/.quarto/
+.Rproj.user/
+.Rhistory
+.DS_Store
+
+**/*.quarto_ipynb
+
+# 網站由 GitHub Actions 建置，不需要 commit 輸出結果
+/docs/

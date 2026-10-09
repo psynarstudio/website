@@ -1,0 +1,122 @@
+---
+pagetitle: "方法｜[你的名字]"
+page-layout: custom
+---
+
+::: {.wrap .hero}
+[方法]{.eyebrow}
+
+[以人為本的<br>城市觀察法]{.display}
+
+::: {.hero-row}
+一座城市好不好，不只看建築與交通，也看人在裡面的感受。我的方法結合臨床心理學的觀察訓練、環境心理學的理論，以及城市分析的數據工具，從一個人的經驗出發，走到一座城市的尺度。
+:::
+:::
+
+::: {.band-navy}
+::: {.wrap .pad .studio}
+::: {.studio-logo}
+<img src="images/logo-white.png" alt="有心敘士工作室標誌：盾牌中的貓頭鷹與鹿" style="width:180px">
+:::
+
+::: {.studio-text}
+<h2>兩種眼光</h2>
+
+::: {.lenses}
+::: {}
+### 貓頭鷹｜覺察
+觀察與智慧。看見細節，直視事物的本質，聽見人心中真正想表達的事。對應方法中的「觀察」與「理解」。
+:::
+
+::: {}
+### 鹿｜創新
+真誠、靈動與愛。以同理為起點，把理解轉化成新的可能。對應方法中的「分析」與「設計」。
+:::
+:::
+:::
+:::
+:::
+
+::: {.wrap .pad}
+<h2 class="section-title" style="margin-bottom:72px">四個步驟</h2>
+
+::: {.method-step}
+::: {}
+[01]{.step-num}
+
+### 觀察
+像心理師一樣看一個地方：人在哪裡停留、怎麼移動、表情與節奏如何。也注意誰不在這裡。
+
+::: {.qa}
+<div><strong>問的問題</strong>人在哪裡停下來？誰沒有出現？</div>
+<div><strong>使用的工具</strong>現場觀察紀錄、行為地圖、城市觀察日誌</div>
+:::
+:::
+
+::: {.ph}
+[照片：現場觀察]
+:::
+:::
+
+::: {.method-step .reverse}
+::: {}
+[02]{.step-num}
+
+### 理解
+用心理學概念重新讀這些觀察，理解一個地方為什麼讓人安心、疲憊或想再回來。
+
+::: {.qa}
+<div><strong>問的問題</strong>這裡帶給人什麼感受？為什麼？</div>
+<div><strong>使用的工具</strong>地方依附、注意力恢復理論、希望感理論、訪談</div>
+:::
+:::
+
+::: {.ph}
+[圖：概念示意]
+:::
+:::
+
+::: {.method-step}
+::: {}
+[03]{.step-num}
+
+### 分析
+把個人觀察放到城市尺度檢驗：這個現象在別的地方也成立嗎？和哪些空間條件有關？
+
+::: {.qa}
+<div><strong>問的問題</strong>這在整座城市裡是什麼樣子？</div>
+<div><strong>使用的工具</strong>GIS 空間分析、交通資料、政策評估、R</div>
+:::
+:::
+
+::: {.ph}
+[互動地圖]
+:::
+:::
+
+::: {.method-step .reverse}
+::: {}
+[04]{.step-num}
+
+### 設計
+把理解轉化成人可以親身走進去的經驗，讓改變被感受到，而不只被說明。
+
+::: {.qa}
+<div><strong>問的問題</strong>怎麼讓人感受到這個改變？</div>
+<div><strong>使用的工具</strong>體驗設計、工作坊、城市評分卡</div>
+:::
+:::
+
+::: {.ph}
+[照片：工作坊現場]
+:::
+:::
+:::
+
+::: {.band-navy}
+::: {.wrap .pad .section-head style="margin-bottom:0"}
+<h2 class="section-title" style="color:#fff">想用這套方法，一起理解你的場域？</h2>
+
+[與有心敘士工作室合作 →](collaborate.qmd){.btn-sun}
+:::
+:::

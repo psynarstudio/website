@@ -1,0 +1,48 @@
+project:
+  type: website
+  output-dir: docs          # GitHub Pages 會從 docs/ 資料夾發布
+
+lang: zh-Hant
+
+website:
+  title: "[你的名字]"
+  description: "人在城市裡，如何過得好？臨床心理師的城市觀察與城市分析。"
+  site-url: "https://[你的網址]"
+  favicon: images/shield-navy.png
+  open-graph: true
+  navbar:
+    collapse-below: lg
+    right:
+      - text: 方法
+        href: method.qmd
+      - text: 城市觀察
+        href: observations/index.qmd
+      - text: 城市分析
+        href: analysis/index.qmd
+      - text: 作品與工具
+        href: works.qmd
+      - text: 關於
+        href: about.qmd
+      - text: 合作
+        href: collaborate.qmd
+  page-footer:
+    left: "© 2026 [你的名字]　與 Nar Studio 合作"
+    right:
+      - text: Instagram
+        href: "https://instagram.com/[帳號]"
+      - text: GitHub
+        href: "https://github.com/[帳號]"
+      - text: RSS
+        href: observations/index.xml
+
+format:
+  html:
+    theme: [cosmo, styles.scss]
+    toc: false
+    smooth-scroll: true
+    anchor-sections: false
+    filters:
+      - step-tags.lua
+
+execute:
+  freeze: auto              # R 程式只在你修改該篇文章時重新執行

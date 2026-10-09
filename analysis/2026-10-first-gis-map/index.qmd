@@ -1,0 +1,39 @@
+---
+title: "學習筆記：我的第一張 GIS 地圖"
+description: "[一兩句摘要]"
+date: 2026-10-06
+categories: [學習筆記, GIS]
+image: cover.jpg
+steps: [分析]
+---
+
+## 從哪個觀察開始
+
+[連回某一篇城市觀察]
+
+## 資料與方法
+
+[資料來源、怎麼處理、遇到的問題]
+
+## 地圖
+
+下面是可互動的地圖範例，換成你自己的資料即可。
+
+```{r}
+#| echo: false
+#| message: false
+library(leaflet)
+
+leaflet() |>
+  addProviderTiles(providers$CartoDB.Positron) |>
+  setView(lng = -4.2518, lat = 55.8642, zoom = 13) |>
+  addCircleMarkers(lng = -4.2518, lat = 55.8642,
+                   radius = 8, color = "#23455A", fillColor = "#F2B84B",
+                   fillOpacity = 0.9, popup = "[地點名稱]")
+```
+
+## 地圖說了什麼
+
+[發現、限制、下一步想問的問題]
+
+{{< include /_subscribe.qmd >}}

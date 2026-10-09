@@ -1,0 +1,52 @@
+# 每次 push 到 main（包含從 Pages CMS 後台存檔）都會自動建置並發布網站
+name: Publish site
+
+# 目前 repo 為私人、尚未開啟 Pages，先停用自動觸發。
+# 準備上線時：把 repo 改公開、Pages Source 設為 GitHub Actions，再取消下面三行的註解。
+on:
+  # push:
+  #   branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::rmarkdown
+            any::knitr
+            any::leaflet
+
+      - name: Render
+        run: quarto render
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
